@@ -1,0 +1,28 @@
+<!--
+  Generated template for the LocationsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu" style="color:#FFFFFF"></ion-icon>
+        </button>
+    <ion-title>Set Location Options</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+          <ion-item *ngFor="let location of locations">
+          <mat-checkbox   class="example-margin" [(ngModel)]="location.Enabled">{{location.Name}}</mat-checkbox>  
+        </ion-item>
+        </ion-list>
+    <button mat-raised-button (click)="SaveClasses()">Save</button>
+
+</ion-content>
